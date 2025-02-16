@@ -1,0 +1,100 @@
+{
+    "intents": [
+      {
+        "intent": "bus_route_planning",
+        "examples": [
+          "Bus route to {destination} from {source}",
+          "How do I get to {destination} from {source} quickly using bus?",
+          "Bus route from {source} to {destination}",
+          "Direct bus from {source} to {destination}",
+          "buses from {source} to {destination}"
+        ],
+        "response": ["The Bus route to {destination} from {source} are via {suggested_buses}" , "You can take {suggested_buses} from {source} to {destination}",
+      "From {source} to {destination}, The available buses are {suggested_buses}"]
+      },
+      {
+        "intent":"bus_stopssbus",
+        "examples": [
+          "How many stops does the bus have between {source} and {destination}?",
+          "What are the stops between {source} to {destination}",
+          "Bus Stops between {source} and {destination}",
+          "Bus Stops from {source} to {destination}",
+          "Stops between {source} to {destination}"
+        ],
+        "response": ["There are {noOfStops} stops between {source} to {destination} via {busNumber} {allStops}","Totally there are {noOfStops} stops via {busNumber} {allStops}"]
+      },
+      {
+        "intent": "real_time_updates",
+        "examples": [
+          "What is the next bus to {destination}?",
+          "Is metro running on time?",
+          "Live status of metro from {station}",
+          "Any delays for bus {bus_number}?",
+          "Real-time location of my bus"
+        ],
+        "response": "Checking live transport updates... The next bus {bus_number} arrives at {time}."
+      },
+      {
+        "intent": "ticket_fare",
+        "examples": [
+          "Ticket price from {source} to {destination}",
+          "How much does metro fare cost?",
+          "Metro fare for students?",
+          "Can I use UPI payment for bus?",
+          "Where to buy a metro card?"
+        ],
+        "response": "The fare from {source} to {destination} is ₹{fare}. UPI and metro cards are accepted."
+      },
+      {
+        "intent": "transport_schedule",
+        "examples": [
+          "Metro timing from {station} to {destination}",
+          "Last bus timing to {destination}",
+          "Bus schedule for {bus_number}",
+          "How frequently does metro run?",
+          "Is there a bus service at night?"
+        ],
+        "response": "The metro from {station} to {destination} runs every {frequency} minutes. The last bus leaves at {time}."
+      },
+      {
+        "intent": "transport_switching",
+        "examples": [
+          "How to switch from metro to bus at {station}?",
+          "Nearest bus stop from {metro_station}?",
+          "How to reach suburban train from metro?",
+          "Best way to change transport at {junction}?"
+        ],
+        "response": "You can switch from metro to bus at {station} using exit {exit_number}. The nearest bus stop is {bus_stop}."
+      },
+      {
+        "intent": "alerts_notifications",
+        "examples": [
+          "Any metro service disruption?",
+          "Bus route diversion update",
+          "Is there a transport strike today?",
+          "Weather affecting transport services?"
+        ],
+        "response": "As of now, there are {status} disruptions on {route}. Stay updated with real-time alerts."
+      },
+      {
+        "intent": "user_feedback",
+        "examples": [
+          "How was the journey on bus {bus_number}?",
+          "Traffic situation on {route}?",
+          "Best route during peak hours?",
+          "How safe is metro at night?"
+        ],
+        "response": "User feedback suggests that {route} is {status}. Peak-hour alternative routes are {alternative_routes}."
+      },
+      {
+        "intent": "general_assistance",
+        "examples": [
+          "How does this chatbot work?",
+          "What can you help me with?",
+          "List of available transport services",
+          "Emergency contact for metro?"
+        ],
+        "response": "I am a transport assistant chatbot! I can help with routes, schedules, real-time updates, and fare information."
+      }
+    ]
+  }
