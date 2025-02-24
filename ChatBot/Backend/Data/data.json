@@ -1,100 +1,165 @@
 {
-    "intents": [
-      {
-        "intent": "bus_route_planning",
-        "examples": [
-          "Bus route to {destination} from {source}",
-          "How do I get to {destination} from {source} quickly using bus?",
-          "Bus route from {source} to {destination}",
-          "Direct bus from {source} to {destination}",
-          "buses from {source} to {destination}"
-        ],
-        "response": ["The Bus route to {destination} from {source} are via {suggested_buses}" , "You can take {suggested_buses} from {source} to {destination}",
-      "From {source} to {destination}, The available buses are {suggested_buses}"]
-      },
-      {
-        "intent":"bus_stopssbus",
-        "examples": [
+  "intents": [
+    {
+      "tag": "Bus_route_planning",
+      "questions": [
+        "How do I get from {source} to {destination} by bus?",
+        "Can you suggest a bus route from {source} to {destination}?",
+        "Which bus should I take to reach {destination} from {source}?",
+       "Buses from {source} to {destination}",
+       "Bus route to {destination} from {source}"
+      ],
+      "responses": [
+        "You can take buses {bus_routes} from {source} to {destination}.",
+        "Buses from {source} to {destination} are {bus_routes}.",
+       "{bus_routes} are the buses from {source} to {destination}"
+      ]
+    },
+{
+        "tag":"bus_stops",
+        "questions": [
           "How many stops does the bus have between {source} and {destination}?",
           "What are the stops between {source} to {destination}",
           "Bus Stops between {source} and {destination}",
           "Bus Stops from {source} to {destination}",
           "Stops between {source} to {destination}"
         ],
-        "response": ["There are {noOfStops} stops between {source} to {destination} via {busNumber} {allStops}","Totally there are {noOfStops} stops via {busNumber} {allStops}"]
+        "responses": ["There are {noOfStops} stops between {source} to {destination} via {busNumber} {allStops}","Totally there are {noOfStops} stops via {busNumber} {allStops}"]
       },
-      {
-        "intent": "real_time_updates",
-        "examples": [
-          "What is the next bus to {destination}?",
-          "Is metro running on time?",
-          "Live status of metro from {station}",
-          "Any delays for bus {bus_number}?",
-          "Real-time location of my bus"
-        ],
-        "response": "Checking live transport updates... The next bus {bus_number} arrives at {time}."
-      },
-      {
-        "intent": "ticket_fare",
-        "examples": [
-          "Ticket price from {source} to {destination}",
-          "How much does metro fare cost?",
-          "Metro fare for students?",
-          "Can I use UPI payment for bus?",
-          "Where to buy a metro card?"
-        ],
-        "response": "The fare from {source} to {destination} is ₹{fare}. UPI and metro cards are accepted."
-      },
-      {
-        "intent": "transport_schedule",
-        "examples": [
-          "Metro timing from {station} to {destination}",
-          "Last bus timing to {destination}",
-          "Bus schedule for {bus_number}",
-          "How frequently does metro run?",
-          "Is there a bus service at night?"
-        ],
-        "response": "The metro from {station} to {destination} runs every {frequency} minutes. The last bus leaves at {time}."
-      },
-      {
-        "intent": "transport_switching",
-        "examples": [
-          "How to switch from metro to bus at {station}?",
-          "Nearest bus stop from {metro_station}?",
-          "How to reach suburban train from metro?",
-          "Best way to change transport at {junction}?"
-        ],
-        "response": "You can switch from metro to bus at {station} using exit {exit_number}. The nearest bus stop is {bus_stop}."
-      },
-      {
-        "intent": "alerts_notifications",
-        "examples": [
-          "Any metro service disruption?",
-          "Bus route diversion update",
-          "Is there a transport strike today?",
-          "Weather affecting transport services?"
-        ],
-        "response": "As of now, there are {status} disruptions on {route}. Stay updated with real-time alerts."
-      },
-      {
-        "intent": "user_feedback",
-        "examples": [
-          "How was the journey on bus {bus_number}?",
-          "Traffic situation on {route}?",
-          "Best route during peak hours?",
-          "How safe is metro at night?"
-        ],
-        "response": "User feedback suggests that {route} is {status}. Peak-hour alternative routes are {alternative_routes}."
-      },
-      {
-        "intent": "general_assistance",
-        "examples": [
-          "How does this chatbot work?",
-          "What can you help me with?",
-          "List of available transport services",
-          "Emergency contact for metro?"
-        ],
-        "response": "I am a transport assistant chatbot! I can help with routes, schedules, real-time updates, and fare information."
-      }
-    ]
-  }
+    {
+      "tag": "Bus_timing",
+      "questions": [
+        "What time does the next bus will arrive?",
+        "Next bus from {source} to {destination}",
+        "When is my next bus from {source} to {destination}?",
+       "Next {noOfBuses} from {source} to {destination}",
+      "When will the next bus arrive?",
+      "What time is the next bus from [source] to [destination]?"
+      ],
+      "responses": [
+        "Next bus from {source} to {destination} will be at {time}. Upcoming bus: {busNumber}",
+        "Next bus will arrive in {minutes} minutes. Upcoming bus: {busNumber}",
+        "{busNumber} will be arriving in {minutes}",
+        "{busNumber} will be arriving at {time}."
+      ]
+    },
+    {
+      "tag": "bus_fare",
+      "questions": [
+        "How much does the bus ticket cost?",
+        "Bus ticket from {source} to {destination}",
+        "Cost of the bus ticket from {source} to {destination}",
+        "Bus fare from {source} to {destination}"
+      ],
+      "responses": [
+        "The bus fare for your route is ₹{fare}.",
+        "Cost for the bus ticket from {source} to {destination} is {fare} rupees.",
+       "The bus ticket costs ₹{fare} from {source} to {destination}."
+      ]
+    },
+    {
+      "tag": "bus_switching",
+      "questions": [
+      "Where do I need to switch bus from {source} to {destination}?",
+     "Interchange bus stop from {source} to {destination}."
+      ],
+      "responses": [
+       "You need to switch to bus {busNumber} from {switchStop}.",
+       "Get down at {switchStop} and board bus {busNumber} to {destination}.",
+      "From {switchStop} take {busNumber} to {destination}"
+      ] 
+    },
+    {
+      "tag": "Metro_train_route_planning",
+      "questions": [
+      "Metro from {source} to {destination}",
+     "Which line I need to take from {source} to {destination}?",
+     "Metro train between {source} to {destination}"
+      ],
+      "responses": [
+        "You can take the {endPoint} metro from {source} to {destination}. Distance : {distance} km",
+        "From {source} to {destination} you can take the {endPoint} metro . Distance : {distance} km"
+      ]
+    },
+    {
+      "tag": "Metro_train_timing",
+      "questions": [
+        "What time does the next metro arrive?",
+        "Next metro from {source} to {destination}",
+       "What time is the next metro train from [source] to [destination]?"
+      ],
+      "responses": [
+        "Next metro train will arrive in {minutes} minutes.",
+        "Metro train will arrive at {time} in {source} metro station"
+      ]
+    },
+    {
+      "tag": "Metro_train_fare",
+      "questions": [
+       "Metro ticket fare from {source} to {destination}",
+       "Cost of metro ticket from {source} to {destination}",
+      "How much is the metro ticket from {source} to {destination}?"
+      ],
+      "responses": [
+      "Metro ticket fare is {code}{fare} from {source} to {destination}",
+      "From {source} to {destination}, the metro fare is {fare} rupees."
+      ]
+    },
+    {
+      "tag": "metro_train_switching",
+      "questions": [
+      "Where do I need to switch metro from {source} to {destination}",
+      "Where should I change metro line between {source} to {destination}?"
+      ],
+      "responses": [
+      "You need to switch metro at {switchStation} station by taking {endPoint} metro to {destination}",
+      "Change metro line at {switchStation} by taking {endPoint} metro to {destination}"
+      ]
+    },
+    {
+      "tag": "suburban_train_route_planning",
+      "questions": [
+        "Local trains from {source} to {destination}",
+        "Suburban trains from {source} to {destination}"
+      ],
+      "responses": [
+        "You can take the suburban train from {source} to {destination} by taking {endPoint}local.",
+       "{endPoint} train will take you from {source} to {destination}"
+      ]
+    },
+    {
+      "tag": "suburban_train_timing",
+      "questions": [
+        "When is the next suburban train to {destination} from {source}?",
+        "Next local train from {source} to {destination}",
+        "What time does the next suburban train arrive?"
+      ],
+      "responses": [
+        "The next suburban train to {destination } is at {time}.",
+        "Next local train from {source} to {destination} is at {time}"
+      ]
+    },
+    {
+      "tag": "suburban_train_fare",
+      "questions": [
+        "Local train ticket fare from {source} to {destination}",
+        "Ticket cost for local train from {source} to {destination}"
+      ],
+      "responses": [
+        "The local train ticket costs ₹{fare} from {source} to {destination}.",
+        "Fare from {source} to {destination} is ₹{fare}"
+      ]
+    },
+    {
+      "tag": "suburban_train_switching",
+      "questions": [
+        "Where do I need to local train from {source} to {destination}",
+      "Where should I change railway station between {source} to {destination}?"
+      ],
+      "responses": [
+        "You need to switch at {switchStation} railway station  and take {endPoint} local to {destination}.",
+        "Change train at {switchStation} railway station and take {endPoint} local"
+      ]
+    }
+  ]
+}

@@ -15,10 +15,10 @@ import urllib3
 from nltk.stem import PorterStemmer
 from tensorflow.keras import backend as K
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout
+from tensorflow.keras.layers import Dense, Dropout , Input
 import pickle
 from tensorflow.keras.models import load_model
-from Handlers.Handler import BusHandler
+from Handlers.Handler import Handler
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import re
@@ -63,40 +63,44 @@ labels = []
 
 
 for intent in data["intents"]:
-     for question in intent["examples"]:
+     for question in intent["questions"]:
         tokens = nltk.word_tokenize(question)
         words.extend(tokens)
         docs_questions.append(tokens)
-        docs_intents.append(intent['intent'])
+        docs_intents.append(intent['tag'])
           
-        if intent["intent"] not in labels:
-        	labels.append(intent["intent"])
+        if intent["tag"] not in labels:
+        	labels.append(intent["tag"])
+
 
 words = [stemmer.stem(token.lower()) for token in words if token != ['>', '<', '\\', ':', '-', ',', '#','[' , ']', '/', '//', '_', '(', ')']]
 words = sorted(list(set(words)))
 labels = sorted(labels)
+
 
 training_data = []
 
 output_empty = [0] * len(labels)
 
 
+print(docs_intents)
 for ind , ques in enumerate(docs_questions):
     bag = []
     stemmed_words = [stemmer.stem(w.lower()) for w in ques if w.isalnum()]
 
     for w in words:
           bag.append(1 if w in stemmed_words else 0)
-    
+
     output_row = output_empty[:]
     output_row[labels.index(docs_intents[ind])] = 1
-
     training_data.append([bag , output_row])
+
 
 random.shuffle(training_data)
 
 X_train = np.array([item[0] for item in training_data])
 y_train = np.array([item[1] for item in training_data])
+
 
 # tf.compat.v1.reset_default_graph()
 
@@ -109,6 +113,8 @@ y_train = np.array([item[1] for item in training_data])
 # net = tflearn.regression(net)
 
 # model = tflearn.DNN(net)
+
+
 
 model = Sequential([
     Dense(128, input_shape=(len(X_train[0]),), activation="relu"),
@@ -125,7 +131,7 @@ model.fit(X_train, y_train, epochs=200, batch_size=8, verbose=1)
 model.save("chatbot_model.h5")
 print("Model trained and saved!")
 
-handler = BusHandler()
+handler = Handler()
 
 
 
@@ -137,8 +143,6 @@ def predict_intent(text):
     source , destination = extract_source_dest(text)
     K.clear_session()
     model = load_model("chatbot_model.h5")
-    words = pickle.load(open("words.pkl", "rb"))
-    labels = pickle.load(open("labels.pkl", "rb"))
     text =  text.replace(source, "{source}").replace(destination, "{destination}")
     bow = bag_of_words(text, words)
     res = model.predict(np.array([bow]))[0]
@@ -151,11 +155,16 @@ def predict_intent(text):
 
 
 def chatbot_response(text):
-    intent = predict_intent(text)
+    predictedIntent = predict_intent(text).lower()
     source , destination = extract_source_dest(text)
-    for i in data["intents"]:
-        if i["intent"] == intent:
-            return handler.getBuses(source,destination,random.choice(i["response"]))
+    if(predictedIntent == 'bus_route_planning'):
+            return handler.getBuses(source,destination,random.choice(data['intents'][0]["responses"]))
+    if(predictedIntent == 'metro_train_fare'):
+            return handler.getMetroFare(source , destination , random.choice(data['intents'][7]["responses"]))
+    for intent in data["intents"]:
+        if(intent['tag'] == predictedIntent):
+            return random.choice(intent["responses"])
+         
     return "Sorry, I didn't understand that."
 
 # while True:
