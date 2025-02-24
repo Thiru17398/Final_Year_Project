@@ -1,53 +1,297 @@
 {
     "blue_line_stations": [
-        "Wimco Nagar Depot Metro",
-        "Wimco Nagar Metro",
-        "Thiruvotriyur Metro",
-        "Thiruvottriyur Theradi Metro",
-        "Kaladipet Metro",
-        "Tollgate Metro",
-        "New Washermenpet Metro",
-        "Tondiarpet Metro",
-        "Sir Thiyagaraya College Metro",
-        "Washermenpet Metro",
-        "Mannadi",
-        "Highcourt",
-        "Puratchi Thalaivar Dr. M.G.Ramachandran Central Metro",
-        "Government Estate",
-        "LIC",
-        "Thousand Lights",
-        "AG DMS",
-        "Teynampet",
-        "Nandanam",
-        "Saidapet Metro",
-        "Little Mount",
-        "Guindy",
-        "Arignar Anna Alandur Metro",
-        "OTA-Nanganallur Road",
-        "Meenambakkam",
-        "Chennai International Airport"
+        {
+            "station" : "Wimco Nagar Depot",
+            "distance" : 0
+        },
+        {
+            "station" : "Wimco Nagar",
+            "distance" : 0.51
+        },
+        {
+            "station" : "Thiruvotriyur",
+            "distance" : 1.37
+        },
+        {
+            "station" : "Thiruvotriyur Theradi",
+            "distance" : 2.73
+        },
+        {
+            "station" : "Kaladipet",
+            "distance" : 3.78
+        },
+        {
+            "station" : "Tollgate",
+            "distance" : 4.69
+        },
+        {
+            "station" : "New Washermenpet",
+            "distance" : 5.74
+        },
+        {
+            "station" : "Tondiarpet",
+            "distance" : 6.96
+        },
+        {
+            "station" : "Sir Thiyagaraya College",
+            "distance" : 7.92
+        },
+        {
+            "station" : "Washermenpet",
+            "distance" : 8.97
+        },
+        {
+            "station" : "Mannadi",
+            "distance" : 10.62
+        },
+        {
+            "station" : "Highcourt",
+            "distance" : 11.54
+        },
+        {
+            "station" : "Puratchi Thalaivar Dr. M.G.Ramachandran Central",
+            "distance" : 13.16
+        },
+        {
+            "station" : "Government Estate",
+            "distance" : 15.02
+        },
+        {
+            "station" : "LIC",
+            "distance" : 15.96
+        },
+        {
+            "station" : "Thousand Lights",
+            "distance" : 17.02
+        },
+        {
+            "station" : "AG DMS",
+            "distance" : 18.93
+        },
+        {
+            "station" : "Teynampet",
+            "distance" : 19.84
+        },
+        {
+            "station" : "Nandanam",
+            "distance" : 20.73
+        },
+        {
+            "station" : "Saidapet",
+            "distance" : 22.37
+        },
+        {
+            "station" : "Little Mount",
+            "distance" : 23.6
+        },
+        {
+            "station" : "Guindy",
+            "distance" : 24.92
+        },
+        {
+            "station" : "Arignar Anna Alandur",
+            "distance" : 26.35
+        },
+        {
+            "station" : "OTA-Nanganallur Road",
+            "distance" : 27.41
+        },
+        {
+            "station" : "Meenambakkam",
+            "distance" : 29.74
+        },
+        {
+            "station" : "Airport",
+            "distance" : 31.3
+        }
     ],
     "green_line_stations": [
-        "Puratchi Thalaivar Dr. M.G.Ramachandran Central Metro",
-        "Egmore Metro",
-        "Nehru Park",
-        "Kilpauk",
-        "Pachaiyappa's College",
-        "Shenoy Nagar",
-        "Anna Nagar East",
-        "Anna Nagar Tower",
-        "Thirumangalam",
-        "Koyambedu",
-        "Puratchi Thalaivi Dr.J.Jayalalithaa CMBT Metro",
-        "Arumbakkam",
-        "Vadapalani",
-        "Ashok Nagar",
-        "Ekkattuthangal",
-        "Arignar Anna Alandur Metro",
-        "St. Thomas Mount Metro"
+        {
+            "station" : "Puratchi Thalaivar Dr. M.G.Ramachandran Central",
+            "distance" : 13.16
+        },
+        {
+            "station" : "Egmore",
+            "distance" : 14.63
+        },
+        {
+            "station" : "Nehru Park",
+            "distance" : 15.81
+        },
+        {
+            "station" : "Kilpauk",
+            "distance" : 16.61
+        },
+        {
+            "station" : "Pachaiyappa's College",
+            "distance" : 17.74
+        },
+        {
+            "station" : "Shenoy Nagar",
+            "distance" : 18.93
+        },
+        {
+            "station" : "Anna Nagar East",
+            "distance" : 20.08
+        },
+        {
+            "station" : "Anna Nagar Tower",
+            "distance" : 21.24
+        },
+        {
+            "station" :  "Thirumangalam",
+            "distance" : 22.04
+        },
+        {
+            "station" : "Koyambedu",
+            "distance" : 23.85
+        },
+        {
+            "station" : "Puratchi Thalaivi Dr.J.Jayalalithaa CMBT",
+            "distance" : 25.24
+        },
+        {
+            "station" : "Arumbakkam",
+            "distance" : 26.51
+        },
+        {
+            "station" : "Vadapalani",
+            "distance" : 27.78
+        },
+        {
+            "station" : "Ashok Nagar",
+            "distance" : 29.53
+        },
+        {
+            "station" : "Ekkattuthangal",
+            "distance" : 27.79
+        },
+        {
+            "station" : "Arignar Anna Alandur",
+            "distance" : 26.35
+        },
+        {
+            "station" : "St Thomas Mount",
+            "distance" : 27.64
+        }
     ],
     "exchange_stations": [
         "Puratchi Thalaivar Dr. M.G.Ramachandran Central Metro",
         "Arignar Anna Alandur Metro"
-    ]
+    ],
+    "daysPriority":{
+        "Monday" : 0,
+        "Tuesday" : 0,
+        "Wednesday":0,
+        "Thursday" : 0,
+        "Friday" : 0,
+        "Saturday" : 1,
+        "Sunday" : 2
+    },
+    "departingTime":{
+        "Airport": {
+            "Wimco Nagar Depot":{
+                "0":{
+                    "first_train":296,
+                    "last_train": 1380
+                },
+                "1":{
+                    "first_train":296,
+                    "last_train": 1380
+                },
+                "2":{
+                    "first_train":303,
+                    "last_train": 1380
+                }
+            },
+            "Chennai Central":{
+                "0":{
+                    "first_train": 295,
+                    "last_train": 1397
+                },
+                "1":{
+                    "first_train": 295,
+                    "last_train": 1397
+                },
+                "2":{
+                    "first_train": 301,
+                    "last_train": 1387
+                }
+
+            }
+        },
+        "St Thomas Mount":{
+            "Chennai Central":{
+                "0":{
+                    "first_train":302,
+                    "last_train": 1380
+                },
+                "1":{
+                    "first_train":302,
+                    "last_train":1380
+                },
+                "2":{
+                    "first_train": 291,
+                    "last_train" : 1397
+                }
+            }
+        },
+        "Chennai Central":{
+            "Airport":{
+                "0":{
+                    "first_train": 302,
+                    "last_train": 1388
+                },
+                "1":{
+                    "first_train":302,
+                    "last_train":1388
+                },
+                "2":{
+                    "first_train": 295,
+                    "last_train": 1388
+                }
+            },
+            "St Thomas Mount":{
+                "0":{
+                    "first_train":301,
+                    "last_train":1380
+                },
+                "1":{
+                    "first_train":301,
+                    "last_train":1380
+                },
+                "2":{
+                    "first_train":291,
+                    "last_train": 1387
+                }
+            }
+        },
+        "Wimco Nagar Depot":{
+            "Airport":{
+                "0":{
+                    "first_train": 291,
+                    "last_train": 1380
+                },
+                "1":{
+                    "first_train":291,
+                    "last_train":1380
+                },
+                "2":{
+                    "first_train":302,
+                    "last_train":1380
+                }
+            }
+        }
+    },
+    "end_point_stations":{
+        "blue_line":{
+            "forward":"Airport",
+            "backward":"Wimco Nagar Depot"
+        },
+        "green_line":{
+            "forward":["St Thomas Mount" , "Airport"],
+            "backward":"Chennai Central"
+        }
+    }
+    
 }

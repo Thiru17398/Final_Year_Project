@@ -1,24 +1,28 @@
 from flask import Flask, request, jsonify
 from BusManager import BusManager
-
+from MetroManager import MetroManager
 
 app = Flask(__name__)
 busManager = BusManager()
 
-
-@app.route('/busInfo',methods = ['POST'])
-def getBuses():
-    data = request.json
-    response = busManager.getBuses(data['origin'] , data['destination'])
-    if(len(response.keys()) == 0):
-        return "No Buses Found"
-    return jsonify(response)
+metroManager = MetroManager()
 
 
-@app.route('/')
-def home():
-    return 'Transit Simplified'
+# @app.route('/busInfo',methods = ['POST'])
+# def getBuses():
+#     data = request.json
+#     response = busManager.getBuses(data['origin'] , data['destination'])
+#     if(len(response.keys()) == 0):
+#         return "No Buses Found"
+#     return jsonify(response)
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# @app.route('/')
+# def home():
+#     return 'Transit Simplified'
+
+
+# if __name__ == '__main__':
+    # app.run(debug=True)
+
+print(metroManager.getMetroRoute(input('Enter Source : ').strip().lower() , input('Enter Destination : ').strip().lower()))
