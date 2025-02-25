@@ -3,7 +3,6 @@
     {
       "tag": "Bus_route_planning",
       "questions": [
-        "How do I get from {source} to {destination} by bus?",
         "Can you suggest a bus route from {source} to {destination}?",
         "Which bus should I take to reach {destination} from {source}?",
        "Buses from {source} to {destination}",
@@ -78,7 +77,8 @@
       ],
       "responses": [
         "You can take the {endPoint} metro from {source} to {destination}. Distance : {distance} km",
-        "From {source} to {destination} you can take the {endPoint} metro . Distance : {distance} km"
+        "From {source} to {destination} you can take the {endPoint} metro . Distance : {distance} km",
+        "Take {endPoint1} metro from {source} and exchange at {exchangeStation} metro station and take {endPoint2} metro to reach {destination}. Distance : {distance} km "
       ]
     },
     {

@@ -101,11 +101,11 @@
             "distance" : 29.74
         },
         {
-            "station" : "Chennai International Airport",
+            "station" : "Airport",
             "distance" : 31.3
         }
     ],
-    "green_line_stations": [
+    "green_line_stations_st_thomas_mount": [
         {
             "station" : "Puratchi Thalaivar Dr. M.G.Ramachandran Central",
             "distance" : 13.16
@@ -175,6 +175,77 @@
             "distance" : 27.64
         }
     ],
+    "green_line_stations_airport":[
+        {
+            "station" : "Puratchi Thalaivar Dr. M.G.Ramachandran Central",
+            "distance" : 13.16
+        },
+        {
+            "station" : "Egmore",
+            "distance" : 14.63
+        },
+        {
+            "station" : "Nehru Park",
+            "distance" : 15.81
+        },
+        {
+            "station" : "Kilpauk",
+            "distance" : 16.61
+        },
+        {
+            "station" : "Pachaiyappa's College",
+            "distance" : 17.74
+        },
+        {
+            "station" : "Shenoy Nagar",
+            "distance" : 18.93
+        },
+        {
+            "station" : "Anna Nagar East",
+            "distance" : 20.08
+        },
+        {
+            "station" : "Anna Nagar Tower",
+            "distance" : 21.24
+        },
+        {
+            "station" :  "Thirumangalam",
+            "distance" : 22.04
+        },
+        {
+            "station" : "Koyambedu",
+            "distance" : 23.85
+        },
+        {
+            "station" : "Puratchi Thalaivi Dr.J.Jayalalithaa CMBT",
+            "distance" : 25.24
+        },
+        {
+            "station" : "Arumbakkam",
+            "distance" : 26.51
+        },
+        {
+            "station" : "Vadapalani",
+            "distance" : 27.78
+        },
+        {
+            "station" : "Ashok Nagar",
+            "distance" : 29.53
+        },
+        {
+            "station" : "Ekkattuthangal",
+            "distance" : 27.79
+        },
+        {
+            "station" : "Arignar Anna Alandur",
+            "distance" : 26.35
+        },
+        {
+            "station" : "Airport",
+            "distance" : 31.3
+        }
+    ]
+    ,
     "exchange_stations": [
         "Puratchi Thalaivar Dr. M.G.Ramachandran Central Metro",
         "Arignar Anna Alandur Metro"
@@ -285,7 +356,7 @@
     },
     "end_point_stations":{
         "blue_line":{
-            "forward":"Airport Metro",
+            "forward":"Airport",
             "backward":"Wimco Nagar Depot"
         },
         "green_line":{

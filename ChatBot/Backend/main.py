@@ -22,6 +22,9 @@ from Handlers.Handler import Handler
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import re
+import asyncio
+import websockets
+import os
 
 app = Flask(__name__)
 
@@ -158,12 +161,11 @@ def chatbot_response(text):
     predictedIntent = predict_intent(text).lower()
     source , destination = extract_source_dest(text)
     if(predictedIntent == 'bus_route_planning'):
-            return handler.getBuses(source,destination,random.choice(data['intents'][0]["responses"]))
+        return handler.getBuses(source,destination,random.choice(data['intents'][0]["responses"]))
     if(predictedIntent == 'metro_train_fare'):
-            return handler.getMetroFare(source , destination , random.choice(data['intents'][7]["responses"]))
-    for intent in data["intents"]:
-        if(intent['tag'] == predictedIntent):
-            return random.choice(intent["responses"])
+        return handler.getMetroFare(source , destination , random.choice(data['intents'][7]["responses"]))
+    if(predictedIntent == 'metro_train_route_planning'):
+         return handler.getMetroRoutePlanning(source , destination , data['intents'][5]["responses"])
          
     return "Sorry, I didn't understand that."
 
@@ -174,11 +176,21 @@ def chatbot_response(text):
 #     response = chatbot_response(user_input)
 #     print("Bot:", response)
 
-@app.route('/api/chatbot/message' , methods = ['POST'])
-def message():
-    user_input = str(request.json.get('message'))
-    response = chatbot_response(user_input)
-    return jsonify({"response" : response})
+async def echo(websocket):
+    print('Web Socket connected')
+    async for message in websocket:
+        response = chatbot_response(message)
+        await websocket.send(response)
+    
+async def main():
+    async with websockets.serve(
+        echo , 
+        "localhost",
+        int(os.environ.get('PORT', 8090))
+    ):
+        await asyncio.Future()
+
+
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    asyncio.run(main())
