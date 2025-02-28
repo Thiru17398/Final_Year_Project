@@ -25,4 +25,11 @@ metroManager = MetroManager()
 # if __name__ == '__main__':
     # app.run(debug=True)
 
-print(metroManager.getMetroRoute(input('Enter Source : ').strip().lower() , input('Enter Destination : ').strip().lower()))
+# print(metroManager.getMetroRoute(input('Enter Source : ').strip().lower() , input('Enter Destination : ').strip().lower()))
+
+busManager = BusManager()
+
+print(busManager.getBusFare(
+'Thiruvotriyur',
+'M.g.r.koyambedu'
+))
