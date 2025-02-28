@@ -21,6 +21,14 @@ class Handler:
         buses = self.busManager.getBuses(source , destination)
         return response.format(source = source , destination = destination , bus_routes = " ".join(buses.keys()))
 
+    def getBusFare(self, source , destination , response):
+        fare = self.busManager.getBusFare(source , destination)
+        fare_list = ""
+        for service in fare:
+            fare_list += service + " : \u20B9" + str(fare[service]) +  "\n"
+
+        return response.format(source = source , destination = destination , fare_list = fare_list)
+
     def getMetroFare(self , source , destination , response):
         metroFare = self.metroManager.getMetroFare(source , destination)
         return response.format(source = source , destination = destination , fare = metroFare , code = '\u20B9')

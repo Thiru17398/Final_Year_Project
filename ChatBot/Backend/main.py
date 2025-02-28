@@ -166,6 +166,8 @@ def chatbot_response(text):
         return handler.getMetroFare(source , destination , random.choice(data['intents'][7]["responses"]))
     if(predictedIntent == 'metro_train_route_planning'):
          return handler.getMetroRoutePlanning(source , destination , data['intents'][5]["responses"])
+    if(predictedIntent == 'bus_fare'):
+        return handler.getBusFare(source, destination, data['intents'][3]["responses"])
          
     return "Sorry, I didn't understand that."
 

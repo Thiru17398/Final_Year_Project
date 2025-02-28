@@ -50,11 +50,9 @@
         "Cost of the bus ticket from {source} to {destination}",
         "Bus fare from {source} to {destination}"
       ],
-      "responses": [
-        "The bus fare for your route is ₹{fare}.",
-        "Cost for the bus ticket from {source} to {destination} is {fare} rupees.",
-       "The bus ticket costs ₹{fare} from {source} to {destination}."
-      ]
+      "responses": 
+        "The ticket cost from {source} to {destination} differs based on the type of Bus Service: \n{fare_list}"
+      
     },
     {
       "tag": "bus_switching",
