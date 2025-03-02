@@ -1,5 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
+import json
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+import time
 
 # payload = { 'api_key': 'ea106fbcc01b6d8077d2aa6398bd4669', 'url': 'https://mtcbus.tn.gov.in/Home/routewiseinfo' }
 # response = requests.get('https://api.scraperapi.com/', params = payload)
@@ -63,8 +71,31 @@ from bs4 import BeautifulSoup
 # print(faresForBusServices)
 
 
+# API_KEY = "088393d705dabaef443fe242ea1e773a"
+# RAPID_API_KEY = "be78578af0mshfcd7e082a40ac2bp1e8da6jsn1268a730bbb6"
 
-    
-    
-    
+# headers = {
+#     'x-rapidapi-key': "be78578af0mshfcd7e082a40ac2bp1e8da6jsn1268a730bbb6",
+#     'x-rapidapi-host': "indian-railway-irctc.p.rapidapi.com",
+#     'x-rapid-api': "rapid-api-database"
+# }
 
+# LIVE_TRAIN_STATUS_URL = "https://indian-railway-irctc.p.rapidapi.com/api/trains/v1/train/status?departure_date=20250302&isH5=true&client=web&train_number=12639"
+
+
+
+# response = requests.get(url , headers = headers )
+# print(response.json())
+
+
+# with open("./Backend/DataStore/TrainStations.json" , "r") as f:
+#     stations = json.load(f)["stations"]
+
+# modifiedData = dict()
+
+# for station in stations:
+#     modifiedData[station["name"]] = station["code"]
+
+
+# with open("./Backend/DataStore/RailwayStations.json" , "w") as f:
+#     json.dump(modifiedData , f)
