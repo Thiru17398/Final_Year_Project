@@ -11,7 +11,7 @@ class MetroManager:
 
     exchange_indices = [
         {
-        "blue_line_indices ": [15 , 22],
+        "blue_line_indices ": [12 , 22],
         "green_line_indices" : [0 , 15] 
         }
     ]
@@ -30,7 +30,6 @@ class MetroManager:
         exchane_station = None
 
         distance = "%.2f"%(abs(self.source['distance'] - self.destination['distance']))
-        print(distance)
         end_point_stations = self.metro_details['end_point_stations']
 
         blue_line_indices = [blue_line.index(self.source) if self.source in blue_line else -1 , blue_line.index(self.destination) if self.destination in blue_line else -1]
@@ -51,18 +50,21 @@ class MetroManager:
         elif(blue_line_indices[0] != -1 and green_line_indices[1] != -1):
             metro_to_be_taken = []
             stops_between = [-1 , -1]
-            stops_between[0] = (blue_line_indices[0] - 15) + green_line_indices[1]
+            stops_between[0] = (blue_line_indices[0] - 12) + green_line_indices[1]
             stops_between[1] = (22 - blue_line_indices[0]) + (15 - green_line_indices[1])
 
             if(blue_line_indices[0] < 15):
+                distance = blue_line[12]["distance"] - blue_line[blue_line_indices[0]]["distance"] + (green_line[green_line_indices[1]]["distance"] - blue_line[12]["distance"])
                 metro_to_be_taken.append(end_point_stations['blue_line']['forward'])
                 exchane_station = self.metro_details['exchange_stations'][0]
                 metro_to_be_taken.append(end_point_stations['green_line']['forward'][0])
             elif(stops_between[0] < stops_between[1]):
+                distance = (blue_line[blue_line_indices[0]]["distance"] - blue_line[12]["distance"]) + (green_line[green_line_indices[1]]["distance"] - blue_line[12]["distance"])
                 metro_to_be_taken.append(end_point_stations['blue_line']['backward'])
                 exchane_station = self.metro_details['exchange_stations'][0]
                 metro_to_be_taken.append(end_point_stations['green_line']['forward'][0])
             else:
+                distance = (blue_line[22]["distance"] - blue_line[blue_line_indices[0]]["distance"]) + (green_line[15]["distance"] - green_line[green_line_indices[1]]["distance"])
                 metro_to_be_taken.append(end_point_stations['blue_line']['forward'])
                 exchane_station = self.metro_details['exchange_stations'][1]
                 metro_to_be_taken.append(end_point_stations['green_line']['backward'])
@@ -75,14 +77,17 @@ class MetroManager:
             stops_between[1] = (15 - green_line_indices[0]) + (22 - blue_line_indices[1])
 
             if(blue_line_indices[1] < 15):
+                distance = (green_line[green_line_indices[0]]["distance"] - blue_line[12]["distance"]) + (blue_line[12]["distance"] - blue_line[blue_line_indices[1]]["distance"])
                 metro_to_be_taken.append(end_point_stations['green_line']['backward'])
                 exchane_station = self.metro_details['exchange_stations'][0]
                 metro_to_be_taken.append(end_point_stations['blue_line']['backward'])
             elif(stops_between[0] < stops_between[1]):
+                distance = (green_line[green_line_indices[0]]["distance"] - blue_line[12]["distance"]) + (blue_line[blue_line_indices[1]]["distance"] - blue_line[12]["distance"]) 
                 metro_to_be_taken.append(end_point_stations['green_line']['backward'])
                 exchane_station = self.metro_details['exchange_stations'][0]
                 metro_to_be_taken.append(end_point_stations['blue_line']['forward'])
             else:
+                distance = (green_line[15]["distance"] - green_line[green_line_indices[0]]["distance"]) + (blue_line[22]["distance"] - blue_line[blue_line_indices[1]]["distance"])
                 metro_to_be_taken.append(end_point_stations['green_line']['forward'][0])
                 exchane_station = self.metro_details['exchange_stations'][1]
                 metro_to_be_taken.append(end_point_stations['blue_line']['backward'])
@@ -96,7 +101,8 @@ class MetroManager:
 
 
     def getMetroFare(self , source , destination):
-        fare = self.getFare(abs(self.source['distance'] - self.destination['distance']))
+        distance = self.getMetroRoute(source , destination)[2]
+        fare = self.getFare(abs(distance))
         return fare
 
     

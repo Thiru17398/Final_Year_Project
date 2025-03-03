@@ -32,7 +32,7 @@ with sync_playwright() as p:
 
 
         })
-    print(train_details)
+
 
     #myTable > tbody > tr:nth-child(1) > td
     #myTable > tbody > tr:nth-child(1) > td > div:nth-child(5)

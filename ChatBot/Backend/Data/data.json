@@ -9,9 +9,9 @@
        "Bus route to {destination} from {source}"
       ],
       "responses": [
-        "You can take buses {bus_routes} from {source} to {destination}.",
-        "Buses from {source} to {destination} are {bus_routes}.",
-       "{bus_routes} are the buses from {source} to {destination}"
+        "You can take buses {bus_routes} from **{source}** to **{destination}**.",
+        "Buses from **{source}** to **{destination}** are {bus_routes}.",
+       "{bus_routes} are the buses from **{source}** to **{destination}**"
       ]
     },
 {
@@ -51,7 +51,7 @@
         "Bus fare from {source} to {destination}"
       ],
       "responses": 
-        "The ticket cost from {source} to {destination} differs based on the type of Bus Service: \n{fare_list}"
+        "The ticket cost from **{source}** to **{destination}** differs based on the type of Bus Service: \n{fare_list}"
       
     },
     {
@@ -74,9 +74,9 @@
      "Metro train between {source} to {destination}"
       ],
       "responses": [
-        "You can take the {endPoint} metro from {source} to {destination}. Distance : {distance} km",
-        "From {source} to {destination} you can take the {endPoint} metro . Distance : {distance} km",
-        "Take {endPoint1} metro from {source} and exchange at {exchangeStation} metro station and take {endPoint2} metro to reach {destination}. Distance : {distance} km "
+        "You can take the **{endPoint} metro** from **{source}** to **{destination}**. Distance : **{distance} km**",
+        "From **{source}** to **{destination}** you can take the **{endPoint} metro** . Distance : **{distance} km**",
+        "Take **{endPoint1} metro** from **{source}** and exchange at **{exchangeStation}** metro station and take **{endPoint2} metro** to reach **{destination}**. Distance : **{distance} km**"
       ]
     },
     {
@@ -99,8 +99,8 @@
       "How much is the metro ticket from {source} to {destination}?"
       ],
       "responses": [
-      "Metro ticket fare is {code}{fare} from {source} to {destination}",
-      "From {source} to {destination}, the metro fare is {fare} rupees."
+      "Metro ticket fare is **{code}{fare}** from **{source}** to **{destination}**",
+      "From **{source}** to **{destination}**, the metro fare is **{fare}** rupees."
       ]
     },
     {
@@ -121,8 +121,7 @@
         "Suburban trains from {source} to {destination}"
       ],
       "responses": [
-        "You can take the suburban train from {source} to {destination} by taking {endPoint}local.",
-       "{endPoint} train will take you from {source} to {destination}"
+        "Local Trains from **{source}** to **{destination}**  \n {train_info}"
       ]
     },
     {

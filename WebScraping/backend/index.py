@@ -34,3 +34,4 @@ metroManager = MetroManager()
 # 'M.g.r.koyambedu'
 # ))
 
+print(metroManager.getMetroFare("egmore","guindy"))

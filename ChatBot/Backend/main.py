@@ -157,7 +157,7 @@ def predict_intent(text):
         return "unknown"
 
 
-def chatbot_response(text):
+async def chatbot_response(text):
     predictedIntent = predict_intent(text).lower()
     source , destination = extract_source_dest(text)
     if(predictedIntent == 'bus_route_planning'):
@@ -168,6 +168,8 @@ def chatbot_response(text):
          return handler.getMetroRoutePlanning(source , destination , data['intents'][5]["responses"])
     if(predictedIntent == 'bus_fare'):
         return handler.getBusFare(source, destination, data['intents'][3]["responses"])
+    if(predictedIntent == "suburban_train_route_planning"):
+        return await handler.getLocalTrainBetweenStations(source, destination, data['intents'][9]["responses"][0])
          
     return "Sorry, I didn't understand that."
 
@@ -181,7 +183,7 @@ def chatbot_response(text):
 async def echo(websocket):
     print('Web Socket connected')
     async for message in websocket:
-        response = chatbot_response(message)
+        response = await chatbot_response(message)
         await websocket.send(response)
     
 async def main():
