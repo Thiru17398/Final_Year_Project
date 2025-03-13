@@ -14,17 +14,6 @@
        "{bus_routes} are the buses from **{source}** to **{destination}**"
       ]
     },
-{
-        "tag":"bus_stops",
-        "questions": [
-          "How many stops does the bus have between {source} and {destination}?",
-          "What are the stops between {source} to {destination}",
-          "Bus Stops between {source} and {destination}",
-          "Bus Stops from {source} to {destination}",
-          "Stops between {source} to {destination}"
-        ],
-        "responses": ["There are {noOfStops} stops between {source} to {destination} via {busNumber} {allStops}","Totally there are {noOfStops} stops via {busNumber} {allStops}"]
-      },
     {
       "tag": "Bus_timing",
       "questions": [

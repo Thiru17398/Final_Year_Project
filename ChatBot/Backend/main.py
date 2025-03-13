@@ -40,10 +40,6 @@ def extract_source_dest(query):
         return source.strip(), destination.strip()
     return None, None
 
-
-
-
-
 def bag_of_words(sentence, words):
     bag = np.zeros(len(words))
     sentence_words = nltk.word_tokenize(sentence)

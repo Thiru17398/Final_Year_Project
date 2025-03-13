@@ -33,6 +33,7 @@ class Handler:
 
         return response.format(source = source , destination = destination , fare_list = fare_list).replace("\n" , "\n")
 
+
     def getMetroFare(self , source , destination , response):
         metroFare = self.metroManager.getMetroFare(source , destination)
         return response.format(source = source , destination = destination , fare = metroFare , code = '\u20B9').replace("\n","\n")
@@ -59,7 +60,7 @@ class Handler:
                 break
             dept = train["departureTime"]
             if(self.validateDeparture(now , dept)):
-                trains_info += str(i) + ". **" + train["departureTime"] + "** From **" + source.upper() + "** and  will reach **" + destination.upper() + "** at **" + train["arrivalTime"] + "** \n"
+                trains_info += str(i) + ". **" + train["departureTime"] + "** From **" + source.upper() + "** and  will reach **" + destination.upper() + "** by **" + train["arrivalTime"] + "** \n"
                 i+=1
         return response.format(source = source.upper() , destination = destination.upper() , train_info = trains_info).replace("\n","\n")
     
