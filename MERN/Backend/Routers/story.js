@@ -2,12 +2,12 @@ const express = require("express")
 const imageupload = require("../Helpers/Libraries/imageUpload");
 
 const { getAccessToRoute } = require("../Middlewares/Authorization/auth");
-const {addStory,getAllStories,detailStory,likeStory, editStory, deleteStory, editStoryPage } = require("../Controllers/story")
+const {getAllStories,detailStory,likeStory, editStory, deleteStory, editStoryPage, addJourneyExperience } = require("../Controllers/story")
 const { checkStoryExist, checkUserAndStoryExist } = require("../Middlewares/database/databaseErrorhandler");
 
 const router = express.Router() ;
 
-router.post("/addstory" ,[getAccessToRoute, imageupload.single("image")],addStory)
+router.post("/addJourneyExperience" ,[getAccessToRoute],addJourneyExperience)
 
 
 router.post("/:slug", checkStoryExist, detailStory)

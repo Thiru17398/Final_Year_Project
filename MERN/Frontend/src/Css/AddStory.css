@@ -19,7 +19,7 @@
     align-items: center;
 }
 
-.addStory-form input#title {
+.addStory-form input.fields {
     width: 100%;
     height: 55px;
     outline: 0;
@@ -32,9 +32,66 @@
     border-bottom: none;
 }
 
-.ck-editor {
-    margin-bottom: 1rem !important;
+.addStory-form .input-fields{
+    display: grid;
+    gap: 15px;
 }
+
+.addStory-form .input-field{
+    display: flex;
+    width: 700px;
+}
+
+
+.addStory-form .input-fields label.fields{
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 100;
+    width: 300px;
+    font-family: 'Balsamiq Sans', cursive;  
+    align-items: center;
+}
+
+
+
+.addStory-form .input-fields input.fields{
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 100;
+    width: 500px;
+    font-family: 'Balsamiq Sans', cursive;  
+    align-items: center;
+}
+
+.addStory-form h2 , .addStory-form h1{
+    margin: 10px auto;
+    font-weight: 100;
+    font-family: 'Balsamiq Sans', cursive; 
+}
+
+.sub-journeys{
+    display: grid;
+    gap: 40px;
+
+}
+
+.sub-journey{
+    display: grid;
+    gap:10px;
+}
+
+.sub-journeys .sub-journey h4{
+    margin: 0px auto;
+    font-weight: 100;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.sub-journey .input-field label.fields , .sub-journey .input-field input.fields{
+    font-size: 1.2rem;
+}
+
+
+
 
 @media only screen and (max-width: 651px) {
     .Inclusive-addStory-page .addStory-form {
@@ -106,6 +163,18 @@
     position: absolute;
     opacity: 0;
     cursor: pointer;
+}
+
+.addJourney-btn{
+    width: 40%;
+    background-color: #0063a5;
+    padding: 0.7rem;
+    color: white;
+    margin: 1.9rem auto 0px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
 }
 
 .addStory-btn {

@@ -1,25 +1,17 @@
 const asyncErrorWrapper = require("express-async-handler")
-const Story = require("../Models/story");
+const JourneyExperience = require("../Models/journeyExperience");
+const Story = require('../Models/story');
 const deleteImageFile = require("../Helpers/Libraries/deleteImageFile");
 const {searchHelper, paginateHelper} =require("../Helpers/query/queryHelpers")
 
-const addStory = asyncErrorWrapper(async  (req,res,next)=> {
+const addJourneyExperience = asyncErrorWrapper(async  (req,res,next)=> {
 
-    const {title,content} = req.body 
-
-    var wordCount = content.trim().split(/\s+/).length ; 
-   
-    let readtime = Math.floor(wordCount /200)   ;
+    console.log(req.body);
+    
 
 
     try {
-        const newStory = await Story.create({
-            title,
-            content,
-            author :req.user._id ,
-            image : req.savedStoryImage,
-            readtime
-        })
+        const newStory = await JourneyExperience.create(req.body)
 
         return res.status(200).json({
             success :true ,
@@ -29,8 +21,6 @@ const addStory = asyncErrorWrapper(async  (req,res,next)=> {
     }
 
     catch(error) {
-
-        deleteImageFile(req)
 
         return next(error)
         
@@ -42,7 +32,7 @@ const getAllStories = asyncErrorWrapper( async (req,res,next) =>{
 
     let query = Story.find();
 
-    query =searchHelper("title",query,req)
+    query = searchHelper("title",query,req)
 
     const paginationResult =await paginateHelper(Story , query ,req)
 
@@ -182,11 +172,12 @@ const deleteStory  =asyncErrorWrapper(async(req,res,next)=>{
             message : "Story delete succesfully "
     })
 
-})
+});
+
 
 
 module.exports ={
-    addStory,
+    addJourneyExperience,
     getAllStories,
     detailStory,
     likeStory,
