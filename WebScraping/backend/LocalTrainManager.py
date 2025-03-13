@@ -25,13 +25,16 @@ class LocalTrainManager:
 
             await page.add_init_script("""Object.defineProperty(navigator, 'webdriver', {get: () => undefined})""")
             
-            input("enter")
             await page.goto("https://enquiry.indianrail.gov.in/mntes/" , wait_until="domcontentloaded")
-            await page.screenshot(path="captcha.png")
-            await page.click("#sidebar > form > ul > li:nth-child(4) > a")
+
+            
             
             source = source.upper()
             destination = destination.upper()
+
+
+
+            await page.click("#sidebar > form > ul > li:nth-child(4) > a")
             await page.wait_for_selector("#jFromStationInput" , timeout = 60000)
             with open("./DataStore/RailwayStations.json" , "r") as f:
                 data = json.load(f)

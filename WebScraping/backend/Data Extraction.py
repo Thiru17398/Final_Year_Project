@@ -3,25 +3,13 @@ from bs4 import BeautifulSoup
 import json
 
 
-# payload = { 'api_key': 'ea106fbcc01b6d8077d2aa6398bd4669', 'url': 'https://mtcbus.tn.gov.in/Home/routewiseinfo' }
-# response = requests.get('https://api.scraperapi.com/', params = payload)
-# print(response.text)
-
-
-
 BASE_URL = "https://mtcbus.tn.gov.in/Home/routewiseinfo"
-
 response = requests.get(BASE_URL)
-
-
 soup = BeautifulSoup(response.content , 'html5lib')
-
 prettified = soup.prettify()
-
 extractedBusNumbers = soup.findAll('option')
 
 busNumbers = []
-
 busInfo = {}
 
 

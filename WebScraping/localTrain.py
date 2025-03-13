@@ -5,9 +5,21 @@ with sync_playwright() as p:
     browser = p.chromium.launch(headless=False)
     page = browser.new_page()
     page.goto("https://enquiry.indianrail.gov.in/mntes/q?opt=MainMenu&subOpt=tbs&excpType=")
-    page.click("#sidebar > form > ul > li:nth-child(4) > a")
+    
     source = input("Enter source : ").upper()
     destination = input("Enter destination : ").upper()
+
+    page.wait_for_selector("body > b > img" , timeout = 60000)
+
+    captcha_image = page.query_selector("body > b > img").get_attribute('src')
+
+
+    print(captcha_image)
+
+    # captcha = input("Enter Captcha")
+    # page.fill("#ans" , captcha)
+    # page.click("#jar")
+    page.click("#sidebar > form > ul > li:nth-child(4) > a")
     page.wait_for_selector("#jFromStationInput" , timeout = 60000)
     with open("./Backend/DataStore/RailwayStations.json" , "r") as f:
         data = json.load(f)

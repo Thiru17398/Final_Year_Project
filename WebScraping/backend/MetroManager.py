@@ -29,7 +29,7 @@ class MetroManager:
         green_line = self.metro_details['green_line_stations_st_thomas_mount']
         exchane_station = None
 
-        distance = "%.2f"%(abs(self.source['distance'] - self.destination['distance']))
+        distance = round(float((abs(self.source['distance'] - self.destination['distance']))),2)
         end_point_stations = self.metro_details['end_point_stations']
 
         blue_line_indices = [blue_line.index(self.source) if self.source in blue_line else -1 , blue_line.index(self.destination) if self.destination in blue_line else -1]

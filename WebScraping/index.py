@@ -9,6 +9,14 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 
+import os
+from dotenv import load_dotenv
+
+
+load_dotenv() 
+
+
+
 # payload = { 'api_key': 'ea106fbcc01b6d8077d2aa6398bd4669', 'url': 'https://mtcbus.tn.gov.in/Home/routewiseinfo' }
 # response = requests.get('https://api.scraperapi.com/', params = payload)
 # print(response.text)
@@ -99,3 +107,19 @@ import time
 
 # with open("./Backend/DataStore/RailwayStations.json" , "w") as f:
 #     json.dump(modifiedData , f)
+
+source = input("Enter Source : ")
+destination = input("Enter Destination : ")
+
+API_KEY = os.getenv("API_KEY")
+
+API_URL = f"https://maps.googleapis.com/maps/api/directions/json?origin={source}&destination={destination}&mode=transit&transit_mode=bus&key={API_KEY}"
+
+response = requests.get(API_URL)
+
+data = response.json()
+
+routes = data['routes'][0]["legs"][0]
+
+for step in routes["steps"]:
+    print(step["html_instructions"])
