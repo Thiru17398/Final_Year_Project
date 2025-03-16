@@ -25,7 +25,10 @@ const Home = () => {
       setLoading(true)
       try {
 
-        const { data } = await axios.get(`/story/getAllStories?search=${searchKey || ""}&page=${page}`)
+        const { data } = await axios.get(`/story/getAllStories?search=${searchKey || ""}&page=${page}`);
+
+        console.log(data);
+        
 
         if (searchKey) {
           navigate({
@@ -41,17 +44,18 @@ const Home = () => {
 
 
         }
-        setStories(data.data)
+        setStories(data.data || []);
         setPages(data.pages)
 
         setLoading(false)
       }
       catch (error) {
         setLoading(true)
+        setStories([]);
       }
     }
     getStories()
-  }, [setLoading, search, page, navigate])
+  }, [search, page, navigate])
 
 
   useEffect(() => {
@@ -76,7 +80,7 @@ const Home = () => {
         :
         <div>
           <div className="story-card-wrapper">
-            {stories.length !== 0 ?
+            {(stories ?? []).length > 0 ?
               stories.map((story) => {
                 return (
                   <CardStory key={uuidv4()} story={story} />

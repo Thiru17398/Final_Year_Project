@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
 import PrivateRoute from './components/Routing/PrivateRoute';
 import Home from "./components/GeneralScreens/Home"
@@ -90,14 +90,6 @@ const App = () => {
 
 }
 
-const LayoutsWithHeader = () => {
-      return (
-            <>
-                  <Header />
-                  <Outlet />
-                  <Footer />
-            </>
-      );
-}
+
 
 export default App;

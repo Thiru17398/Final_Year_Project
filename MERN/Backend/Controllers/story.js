@@ -33,10 +33,11 @@ const getAllStories = asyncErrorWrapper( async (req,res,next) =>{
     let query = Story.find();
 
     query = searchHelper("title",query,req)
+    
 
     const paginationResult =await paginateHelper(Story , query ,req)
 
-    query = paginationResult.query  ;
+    query = paginationResult.query;
 
     query = query.sort("-likeCount -commentCount -createdAt")
 
