@@ -90,6 +90,15 @@ const App = () => {
 
 }
 
+const LayoutsWithHeader = () => {
+      return (
+            <>
+                  <Header />
+                  <Outlet />
+                  <Footer />
+            </>
+      );
+}
 
 
 export default App;
