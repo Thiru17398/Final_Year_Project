@@ -1,0 +1,1 @@
+PROJECT DESCRIPTION : A Public Transit Guide Platform, which aims to enhance the experience of public transportation users.
