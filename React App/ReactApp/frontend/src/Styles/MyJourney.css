@@ -1,0 +1,62 @@
+.journey-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 10px auto;
+  width: 80%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 10px;
+  background: #fff;
+}
+
+.input-field {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.icon {
+  color: #007bff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.submit-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
+
+.search-options{
+  background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 2.2rem;
+}
+
+.map-container{
+  padding: 40px;
+}
