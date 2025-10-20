@@ -1,25 +1,12 @@
 
-# PUBLIC TRANSIT GUIDANCE
-
-An unified public transit guidance platform for enhancing the experience of the commuters who use public transport.
-
-
-## MODULES
-
- - Journey Experience
- - My Journey
- - Chatbot
- - Live Updates
-
-
 ## STEPS TO RUN
 
-#### :clipboard: CLONE THE REPOSITORY
+### :clipboard: CLONE THE REPOSITORY
 
 Run `git clone https://github.com/Thiru17398/Final_Year_Project.git` to clone this repository
 
 
-#### START THE MAIN APPLICATION
+### START THE MAIN APPLICATION
 :arrow_forward: Run the Backend of Main App
 
 - Change the directory  `cd 'Main App\backend'`
