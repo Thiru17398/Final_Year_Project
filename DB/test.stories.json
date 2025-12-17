@@ -1,0 +1,190 @@
+[{
+  "_id": {
+    "$oid": "67ac8351c018448b6d5546f0"
+  },
+  "author": {
+    "$oid": "67ab5c5e403fd5ddcb3e9092"
+  },
+  "title": "Thiruvottiyur - R M K Engineering College",
+  "content": "<p>Source: Thiruvottiyur<br>Destination: RMK Engineering College<br>Transportation Used: Train + Walking/Auto</p><p><br>Journey Details:<br>Thiruvottiyur – Kavarapettai (By Train)<br>• Journey Duration: 50 min – 1 hr (depends on the signalling in the stations)<br>• Cost: 10 Rs<br>• Frequency: Every 10-30 min<br>• Based on My Experience: Board the last compartment for a quicker exit.<br>Kavarapettai – RMK Engineering College (By Walking)<br>• Duration: 20 mins ( Distance 1.7 km)<br>• Based on My Experience: Instead of taking the straight road, shortcut routes take less time by walking. Local residents might help in finding the shortcut route.<br>Kavarapettai – RMK Engineering College (By Auto)<br>• Duration: 5 - 7 mins<br>• Cost: Varies upon the number of persons (Avg 40 Rs)<br>• Based on My Experience: If you take an auto from the railway station to the college, they might charge around 70 Rs if you are traveling alone. The cost will reduce per person if more than one person shares the auto.<br>Kavarapettai – RMK Engineering College (Walking + Shared Auto)<br>• Cost: 10 Rs<br>• Duration: 14 mins (10 mins by walk and 3 - 4 mins by shared auto)<br>• My Experience: If you walk from the railway station to the main road, a 7-seater white shared auto will be available. You can take that&nbsp;to&nbsp;the&nbsp;college.</p>",
+  "image": "image_2025-02-12T11-17-37.274ZJourney.png",
+  "readtime": 0,
+  "likes": [
+    {
+      "$oid": "67ac8629c018448b6d554766"
+    },
+    {
+      "$oid": "67ab5c5e403fd5ddcb3e9092"
+    }
+  ],
+  "likeCount": 2,
+  "comments": [
+    {
+      "$oid": "67ac8c5dc018448b6d5547ae"
+    }
+  ],
+  "commentCount": 1,
+  "createdAt": {
+    "$date": "2025-02-12T11:17:37.297Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-12T12:05:30.582Z"
+  },
+  "slug": "thiruvottiyur-r-m-k-engineering-college",
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "67ac8402c018448b6d55470b"
+  },
+  "author": {
+    "$oid": "67ac83e4c018448b6d554704"
+  },
+  "title": "Parrys Corner - ISKON Temple",
+  "content": "<p><br>Source: Parrys Corner&nbsp;<br>Destination: ISKON Temple,ECR<br>Transportation Used: Bus + Walking/Auto<br><br>Journey Details:</p><p>Parrys Corner - Akkarai (By Bus)<br>• Journey Duration: 1hr 30min - 2hrs(depends on traffic)<br>• Cost: Approx.30 - 40 Rs.<br>• Frequency: Every 15-30 min<br>• Based on My Experience: Buses like 109,109A,599 are good options.Taking an express or deluxe bus saves time as they have fewer stops compared to ordinary buses.</p><p>Akkarai - ISKON Temple (By Walking)<br>• Duration: 10 - 15 mins<br>• Based on My Experience: The walk is pleasant as the road is wide and not too crowded. Alternatively, you can take a share auto for around 10 Rs. if available.</p><p>Akkarai - ISKCON Temple (By Auto)<br>• Duration: 3 - 5 mins<br>• Cost: Around 30 - 50 Rs(depends on negotiation and number of passengers)<br>• Based on My Experience: If &nbsp;traveling alone,the auto drivers might charge higher.Sharing with others reduces the fare per person.</p><p>Akkarai - ISKCON Temple (Walking + Shared Auto)<br>• Cost: 10 Rs<br>• Duration: 7 - 10 mins (5 mins walk and 2 - 3 mins by shared auto)<br>• My Experience: Walking to the main road increases the chances of getting a shared auto at&nbsp;a&nbsp;lower&nbsp;price.</p>",
+  "image": "image_2025-02-12T11-20-34.385ZJourney.png",
+  "readtime": 0,
+  "likes": [],
+  "likeCount": 0,
+  "comments": [],
+  "commentCount": 0,
+  "createdAt": {
+    "$date": "2025-02-12T11:20:34.394Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-13T04:53:37.966Z"
+  },
+  "slug": "parrys-corner-iskon-temple",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ac847ec018448b6d55472b"
+  },
+  "author": {
+    "$oid": "67ac83e4c018448b6d554704"
+  },
+  "title": "Porur - Besant Nagar Beach",
+  "content": "<p>Source: Porur<br>Destination: Besant Nagar Beach&nbsp;<br>Transportation Used: Bus + Walking/Auto<br><br>Journey Details:</p><p>Porur – Adyar Depot (By Bus)<br>• Journey Duration: 50 min – 1 hr 10 min(depends on the signalling in the stations)<br>• Cost:Rs.15 - Rs.20<br>• Frequency: Every 10-20 min<br>• Based on My Experience: Buses like 47A, 5E, or 23C are good options.Try to board early morning or late evening to avoid heavy traffic.</p><p>Adyar Depot - Besant Nagar Beach(By Walking)<br>• Duration: 15-20 mins<br>• Based on My Experience: Instead of taking the main road, interior streets might have less traffic and provide more peaceful walking experience.</p><p>Adyar Depot– Besant Nagar Beach (By Auto)<br>• Duration:5 - 7 mins&nbsp;<br>• Cost: Rs.40 - Rs.60<br>• Based on My Experience: Autos near Adyar Depot may charge more if traveling alone.Sharing with others can reduce costs significantly.</p><p>Adyar Depot - Besant Nagar Beach &nbsp;(Walking + Shared Auto)<br>• Cost: Rs.10 - Rs.15<br>• Duration: 10 - 12 mins(5 - 7 mins by walk + 3 - 5 mins by shared auto)<br>• My Experience: Walking to LB Road Junction increases chances of finding a shared auto to Besant Nagar Beach, reducing travel&nbsp;time&nbsp;and&nbsp;cost.</p>",
+  "image": "image_2025-02-12T11-22-38.570ZJourney.png",
+  "readtime": 0,
+  "likes": [],
+  "likeCount": 0,
+  "comments": [],
+  "commentCount": 0,
+  "createdAt": {
+    "$date": "2025-02-12T11:22:38.579Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-12T11:22:38.579Z"
+  },
+  "slug": "porur-besant-nagar-beach",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ac84e5c018448b6d554746"
+  },
+  "author": {
+    "$oid": "67ab5c5e403fd5ddcb3e9092"
+  },
+  "title": "Mogappair - Marina Beach",
+  "content": "<p>Source: Mogappair<br>Destination: Marina Beach<br>Transportation Used: Train + Walking / Car / Auto / Bus<br>________________________________________<br>Journey Details:<br>Mogappair – Marina Beach (By Train / Metro and Local Train)<br>• Journey Duration: 45 min – 1 hr (depends on the traffic)<br>• Cost: 20 - 40Rs(for metro)+20Rs(for local train)<br>• Possible Itinerary: From the starting point, go to the nearest Metro Station and proceed to Chennai Central Station. From Chennai Central Station, go to Government Estate Station. Marina Beach is a short haul, so it's just a short walk from there.<br>• Based on My Experience: &nbsp;It is better to board the first or last coach for quicker exits at crowded stations.<br>Mogappair – Marina Beach (By Car)<br>• Duration: 45 mins - 1hr<br>• Based on My Experience: I've found it helpful to arrive early, especially on weekends, to secure a parking spot. The parking lot near the Gandhi Statue is often a good option, but it can get crowded.<br>Mogappair – Marina Beach (By Auto)<br>• Duration: 40 - 50 mins<br>• Cost: 220 - 250 Rs<br>• Based on My Experience: Auto(auto-rickshaw) near metro stations often charge higher fares. It's better to walk a little towards the main road to find autos with more reasonable rates.<br>Mogappair – Marina Beach(By Bus)<br>• Cost: 15 - 20Rs&nbsp;<br>. &nbsp; &nbsp; &nbsp; Bus Numbers: 21G, 27B, 29A, [Other Relevant Numbers] (depends on availability)&nbsp;<br>• Duration: 45 mins - 1 hour 15mins<br>• My Experience: Buses are almost always crowded during peak hours. If you're in a hurry, taking an auto or metro is a&nbsp;better&nbsp;option.</p>",
+  "image": "image_2025-02-12T11-24-21.648ZJourney.png",
+  "readtime": 1,
+  "likes": [],
+  "likeCount": 0,
+  "comments": [],
+  "commentCount": 0,
+  "createdAt": {
+    "$date": "2025-02-12T11:24:21.655Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-12T11:24:21.655Z"
+  },
+  "slug": "mogappair-marina-beach",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ac8597c018448b6d554756"
+  },
+  "author": {
+    "$oid": "67ab5c5e403fd5ddcb3e9092"
+  },
+  "title": "Nungambakkam - Besant Nagar Beach",
+  "content": "<p>My Journey:<br><br>Source: Nungambakkam&nbsp;<br>Destination: Besant Nagar Beach &nbsp;<br>Transportation Used: &nbsp;Bus + Auto/Walking &nbsp;<br><br>Journey Details:<br>Nungambakkam – Adyar (By Bus)<br>• Journey Duration: &nbsp;30 - 40 mins(depends on the traffic)<br>• Cost: 15 -20 Rs<br>• Frequency: Every 10-20 min<br>. &nbsp; &nbsp; &nbsp; Bus numbers : 23C, 5E, 47A, 51J [Other Relevant Numbers] (depends on availability)&nbsp;<br>• Based on My Experience: It is to increase your likelihood of finding &nbsp;a seat, board the bus at the Sterling Road or Loyalo College (bus stop). These stops tend to be less crowded than some of the others along the route. &nbsp;Be prepared for potential delays due to traffic, and it's always a good idea to have a backup plan in case the bus is running late .<br>Adyar – Besant Nagar Beach (By Bus)<br>• Duration: 10 - 20 mins<br>. &nbsp; &nbsp; &nbsp; Bus numbers: 23C, 5E, 47A (and other local routes may be available)<br>• Based on My Experience: If you're in a hurry, a direct auto-rickshaw from the Adyar signal might be a faster option. Be sure to negotiate the fare beforehand, as they sometimes tend to overcharge near popular areas like the beach. &nbsp;While the bus is more economical, it can get crowded, and the travel time can vary considerably depending on traffic. &nbsp;I've often found that the bus is a good option if you're not in a rush and want to save money, but if time is a constraint, the auto-rickshaw (after careful fare negotiation) can be a better choice.<br>Adyar – Besant Nagar Beach (By Auto)<br>• Duration: &nbsp;8 – 12 mins(depending on the traffic conditions)<br>• Cost: 70 - 100Rs (negotiable)<br>• Based on My Experience: &nbsp;Auto-rickshaw drivers near Adyar Junction often quote higher fares. &nbsp;I've found that walking a short haul towards Indira Nagar can often lead to more reasonable rates. &nbsp;It's always a good idea to negotiate the fare before starting your journey.<br>Adyar – Besant Nagar Beach (Walking + Shared Auto)<br>• Cost: 20 Rs<br>• Duration: 15 mins (10 mins by shared auto + 5 mins walking)<br>• My Experience: Shared auto-rickshaws are readily available near the Adyar bus depot. They typically stop at the Besant Nagar Bus Terminus, which is a short walk from the beach. &nbsp;I've found this to be a convenient and cost-effective option.</p>",
+  "image": "image_2025-02-12T11-27-19.467ZJourney.png",
+  "readtime": 1,
+  "likes": [
+    {
+      "$oid": "67ab5c5e403fd5ddcb3e9092"
+    }
+  ],
+  "likeCount": 1,
+  "comments": [],
+  "commentCount": 0,
+  "createdAt": {
+    "$date": "2025-02-12T11:27:19.483Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-12T12:06:07.195Z"
+  },
+  "slug": "nungambakkam-besant-nagar-beach",
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "67ac86eec018448b6d55476d"
+  },
+  "author": {
+    "$oid": "67ac8629c018448b6d554766"
+  },
+  "title": "Thervoi Kandigai - R M K Engineering College",
+  "content": "<p>Source: Thervoy kandigai&nbsp;<br>Destination: Rmk engineering college&nbsp;<br>Transportation used: public bus/ shared auto/walk</p><p>1. Journey details:</p><p>Thervoy - Rmk engineering college (by bus)<br>Duration: approximately 40 mins<br>Cost : 15(bus+walk(3.3km)) / 25rs(bus)<br>Based on My Experience:&nbsp;<br>1. If u travel in 37T(bus) throughly you reach kavaraipettai. After that you can use any auto/bus/walk you reach your destination. Distance from kavaraipettai to rmk engineering college is 3.3 km.<br>If you use bus means &nbsp;you spend 10rs to reach your&nbsp;destination.</p>",
+  "image": "image_2025-02-12T11-33-02.828ZJourney.png",
+  "readtime": 0,
+  "likes": [],
+  "likeCount": 0,
+  "comments": [],
+  "commentCount": 0,
+  "createdAt": {
+    "$date": "2025-02-12T11:33:02.834Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-12T11:33:02.834Z"
+  },
+  "slug": "thervoi-kandigai-r-m-k-engineering-college",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ad7a5a7d0ac712ffd6003d"
+  },
+  "author": {
+    "$oid": "67ab5c5e403fd5ddcb3e9092"
+  },
+  "title": "R M K Engineering College - Thiruvottiyur",
+  "content": "<p><strong>My Journey:</strong></p><p><strong>Source:</strong> Thiruvottiyur<br><strong>Destination:</strong> RMK Engineering College<br><strong>Transportation Used:</strong> Train + Walking/Auto</p><p>&nbsp;</p><p><strong>Journey Details:</strong></p><p><strong>Thiruvottiyur – Kavarapettai (By Train)</strong></p><ul><li><strong>Journey Duration:</strong> 50 min – 1 hr (depends on the signalling in the stations)</li><li><strong>Cost:</strong> 10 Rs</li><li><strong>Frequency:</strong> Every 10-30 min</li><li><strong>Based on My Experience:</strong> Board the last compartment for a quicker exit.</li></ul><p><strong>Kavarapettai – RMK Engineering College (By Walking)</strong></p><ul><li><strong>Duration:</strong> 20 mins</li><li><strong>Based on My Experience:</strong> Instead of taking the straight road, shortcut routes take less time by walking. Local residents might help in finding the shortcut route.</li></ul><p><strong>Kavarapettai – RMK Engineering College (By Auto)</strong></p><ul><li><strong>Duration:</strong> 5 - 7 mins</li><li><strong>Cost:</strong> Varies upon the number of persons (Avg 40 Rs)</li><li><strong>Based on My Experience:</strong> If you take an auto from the railway station to the college, they might charge around 70 Rs if you are traveling alone. The cost will reduce per person if more than one person shares the auto.</li></ul><p><strong>Kavarapettai – RMK Engineering College (Walking + Shared Auto)</strong></p><ul><li><strong>Cost:</strong> 10 Rs</li><li><strong>Duration:</strong> 14 mins (10 mins by walk and 3 - 4 mins by shared auto)</li><li><strong>My Experience:</strong> If you walk from the railway station to the main road, a 7-seater white shared auto will be available. You can take that to the college.</li></ul>",
+  "image": "image_2025-02-13T04-51-38.690ZJourney.png",
+  "readtime": 0,
+  "likes": [
+    {
+      "$oid": "67ab5c5e403fd5ddcb3e9092"
+    },
+    {
+      "$oid": "67ac83e4c018448b6d554704"
+    }
+  ],
+  "likeCount": 2,
+  "comments": [],
+  "commentCount": 0,
+  "createdAt": {
+    "$date": "2025-02-13T04:51:38.698Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-13T04:54:00.979Z"
+  },
+  "slug": "r-m-k-engineering-college-thiruvottiyur",
+  "__v": 2
+}]
